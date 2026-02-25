@@ -1,12 +1,10 @@
 import "./ShieldText.css"
 
-function ShieldText(label) {
-    let labelBase = label.label
-    let placeholderBase = `Digite o seu ${labelBase.toLowerCase()}`
+function ShieldText(prop) {
     return (
         <div className="shield-txt">
-            <label>{labelBase}</label>
-            <input placeholder={placeholderBase}/>
+            <label>{prop.label}</label>
+            <input required={prop.mandatory} placeholder={prop.placeholder}/>
         </div>
     )
 }

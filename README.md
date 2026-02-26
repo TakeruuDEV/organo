@@ -2,14 +2,14 @@
 
 ## 📌 Sobre o Projeto
 
-O **Organo** é uma aplicação desenvolvida em **React** que permite cadastrar e organizar colaboradores de acordo com:
+O **Organo** é uma aplicação desenvolvida em **React** que permite:
 
-* 👤 **Nome**
-* 💼 **Cargo**
-* 🖼️ **Imagem**
-* 🏷️ **Time**
+* 👤 Cadastrar colaboradores
+* 🏷️ Criar novos times dinamicamente
+* 🎨 Definir cores personalizadas para cada time
+* 📂 Organizar visualmente colaboradores dentro de suas respectivas equipes
 
-A proposta do projeto é simular a estrutura organizacional de uma empresa, permitindo visualizar os membros distribuídos por suas respectivas equipes de forma dinâmica e visualmente organizada.
+A proposta do projeto é simular a estrutura organizacional de uma empresa, permitindo visualizar os membros distribuídos por suas equipes de forma dinâmica, personalizável e visualmente organizada.
 
 ---
 
@@ -21,10 +21,14 @@ A proposta do projeto é simular a estrutura organizacional de uma empresa, perm
 * HTML5
 * Hooks (`useState`)
 * Componentização
+* Renderização dinâmica com `map`
+* Elevação de estado (Lifting State Up)
 
 ---
 
 ## 🧩 Funcionalidades
+
+---
 
 ### ✅ Cadastro de Colaboradores
 
@@ -39,37 +43,58 @@ Ao enviar o formulário, o colaborador é automaticamente adicionado ao time cor
 
 ---
 
+### ✅ Criação Dinâmica de Times 🆕
+
+Agora também é possível criar novos times através de um formulário específico.
+
+O usuário pode definir:
+
+* 🏷️ Nome do time
+* 🎨 Cor primária
+* 🎨 Cor secundária
+
+Após criar o time:
+
+* Ele é automaticamente adicionado à lista de times.
+* Passa a aparecer na interface.
+* Já pode receber colaboradores.
+* Suas cores são aplicadas dinamicamente na renderização.
+
+Isso tornou o projeto mais dinâmico e próximo de uma aplicação real.
+
+---
+
 ### ✅ Organização por Times
 
-Cada colaborador é exibido dentro de uma seção específica do seu time.
-
-Exemplo de times:
-
-* Front-end
-* Back-end
-* UX & Design
-* DevOps
-* Data Science
+Cada colaborador é exibido dentro da seção específica do seu time.
 
 Cada time possui:
 
 * Nome
-* Cor principal
-* Cor secundária
+* Cor principal (usada em bordas e destaques)
+* Cor secundária (usada no fundo da seção)
+
+A renderização ocorre apenas se houver colaboradores naquele time (renderização condicional).
 
 ---
 
 ### ✅ Componentização
 
-O projeto é dividido em componentes reutilizáveis, como:
+O projeto é dividido em componentes reutilizáveis:
 
-* `App` → Componente principal
-* `Form` → Formulário de cadastro
+* `App` → Componente principal (estado centralizado)
+* `Form` → Formulário de cadastro de colaboradores
+* `FormTeam` → Formulário de criação de novos times
 * `Team` → Seção de cada time
 * `Collaborator` → Card individual do colaborador
 * `Banner` → Cabeçalho da aplicação
 
-Essa estrutura facilita manutenção, escalabilidade e reaproveitamento de código.
+Essa estrutura facilita:
+
+* Manutenção
+* Escalabilidade
+* Organização
+* Reutilização de código
 
 ---
 
@@ -77,12 +102,15 @@ Essa estrutura facilita manutenção, escalabilidade e reaproveitamento de códi
 
 O projeto trabalha conceitos importantes do React:
 
-* Estado (`useState`)
+* `useState`
 * Props
 * Renderização condicional
 * Listas e `map`
+* Uso correto de `key` em listas
 * Comunicação entre componentes
-* Elevação de estado (lifting state up)
+* Elevação de estado (Lifting State Up)
+* Atualização de estado imutável
+* Estilização dinâmica com `style={{}}`
 
 ---
 
@@ -91,21 +119,32 @@ O projeto trabalha conceitos importantes do React:
 O Organo foi desenvolvido com foco em:
 
 * Praticar fundamentos do React
-* Compreender a importância da componentização
-* Trabalhar manipulação de estados
-* Simular uma aplicação real de organização de equipes
+* Trabalhar manipulação de estado
+* Compreender melhor fluxo de dados entre componentes
+* Criar uma aplicação com comportamento dinâmico real
+* Simular um sistema organizacional personalizável
 
 ---
 
 ## 📷 Resultado Esperado
 
-Após adicionar um colaborador, ele aparece em formato de card dentro do time escolhido, exibindo:
+Após adicionar um colaborador:
 
-* Foto
-* Nome
-* Cargo
+* Ele aparece em formato de card
+* Dentro do time escolhido
+* Com:
 
-A interface é organizada, visual e dinâmica.
+  * 🖼️ Foto
+  * 👤 Nome
+  * 💼 Cargo
+
+Após criar um novo time:
+
+* Ele aparece automaticamente na interface
+* Com as cores definidas pelo usuário
+* Pronto para receber colaboradores
+
+A interface é visual, organizada e dinâmica.
 
 ---
 
@@ -116,12 +155,22 @@ A interface é organizada, visual e dinâmica.
 * Persistência de dados (LocalStorage ou API)
 * Filtro por time
 * Responsividade aprimorada
-* Integração com backend
+* Animações
+* Drag and drop entre times
+* Backend com banco de dados
+* Sistema de autenticação
 
 ---
 
 ## 💡 Conclusão
 
-O **Organo** é um projeto ideal para consolidar os fundamentos do React, especialmente no que diz respeito à organização de componentes e manipulação de estado.
+O **Organo** evoluiu de um projeto estático para uma aplicação dinâmica com criação de times em tempo real.
 
-Ele simula um cenário real de cadastro e organização de equipes, sendo excelente para fortalecer a base no desenvolvimento Front-end.
+Agora ele trabalha:
+
+* Estrutura organizacional
+* Personalização visual
+* Manipulação dinâmica de estado
+* Escalabilidade de dados
+
+É um excelente projeto para consolidar os meus fundamentos de React e entender como aplicações reais gerenciam estado e organização de dados no Front-end.

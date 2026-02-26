@@ -10,7 +10,7 @@ function ListDown(prop){
             >
                 <option value="">Selecione um time</option>
                 {prop.itens.map(item => {
-                    return <option key={item}>{item}</option>
+                    return <option key={item.name}>{item}</option>
                 })}
 
             </select>

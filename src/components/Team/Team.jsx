@@ -3,7 +3,7 @@ import "./Team.css"
 
 function Team(prop){
     return (
-        prop.colaborators.length > 0 ?
+        prop.colaborators.length > 0 &&
         <section className="team" 
             style={{backgroundColor:prop.secondColor}}
         >
@@ -12,7 +12,6 @@ function Team(prop){
             {prop.colaborators.map(colaborator => <Colaborator mainColor={prop.mainColor} key={colaborator.name} name={colaborator.name} role={colaborator.role} image={colaborator.image}/>)}
             </div>
         </section>
-        : ""
     )
 }
 

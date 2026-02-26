@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# 🚀 Projeto **Organo**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Sobre o Projeto
 
-## Available Scripts
+O **Organo** é uma aplicação desenvolvida em **React** que permite cadastrar e organizar colaboradores de acordo com:
 
-In the project directory, you can run:
+* 👤 **Nome**
+* 💼 **Cargo**
+* 🖼️ **Imagem**
+* 🏷️ **Time**
 
-### `npm start`
+A proposta do projeto é simular a estrutura organizacional de uma empresa, permitindo visualizar os membros distribuídos por suas respectivas equipes de forma dinâmica e visualmente organizada.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm test`
+* **React**
+* JavaScript (ES6+)
+* CSS
+* HTML5
+* Hooks (`useState`)
+* Componentização
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ✅ Cadastro de Colaboradores
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O usuário pode preencher um formulário com:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Nome do colaborador
+* Cargo
+* URL da imagem
+* Time ao qual pertence
 
-### `npm run eject`
+Ao enviar o formulário, o colaborador é automaticamente adicionado ao time correspondente.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ✅ Organização por Times
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Cada colaborador é exibido dentro de uma seção específica do seu time.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Exemplo de times:
 
-## Learn More
+* Front-end
+* Back-end
+* UX & Design
+* DevOps
+* Data Science
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Cada time possui:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Nome
+* Cor principal
+* Cor secundária
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### ✅ Componentização
 
-### Analyzing the Bundle Size
+O projeto é dividido em componentes reutilizáveis, como:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* `App` → Componente principal
+* `Form` → Formulário de cadastro
+* `Team` → Seção de cada time
+* `Collaborator` → Card individual do colaborador
+* `Banner` → Cabeçalho da aplicação
 
-### Making a Progressive Web App
+Essa estrutura facilita manutenção, escalabilidade e reaproveitamento de código.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🧠 Conceitos Aplicados
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+O projeto trabalha conceitos importantes do React:
 
-### Deployment
+* Estado (`useState`)
+* Props
+* Renderização condicional
+* Listas e `map`
+* Comunicação entre componentes
+* Elevação de estado (lifting state up)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🎯 Objetivo do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+O Organo foi desenvolvido com foco em:
+
+* Praticar fundamentos do React
+* Compreender a importância da componentização
+* Trabalhar manipulação de estados
+* Simular uma aplicação real de organização de equipes
+
+---
+
+## 📷 Resultado Esperado
+
+Após adicionar um colaborador, ele aparece em formato de card dentro do time escolhido, exibindo:
+
+* Foto
+* Nome
+* Cargo
+
+A interface é organizada, visual e dinâmica.
+
+---
+
+## 🔮 Possíveis Melhorias Futuras
+
+* Remover colaboradores
+* Editar informações
+* Persistência de dados (LocalStorage ou API)
+* Filtro por time
+* Responsividade aprimorada
+* Integração com backend
+
+---
+
+## 💡 Conclusão
+
+O **Organo** é um projeto ideal para consolidar os fundamentos do React, especialmente no que diz respeito à organização de componentes e manipulação de estado.
+
+Ele simula um cenário real de cadastro e organização de equipes, sendo excelente para fortalecer a base no desenvolvimento Front-end.

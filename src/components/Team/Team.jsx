@@ -1,14 +1,18 @@
+import Colaborator from "../Colaborator/Colaborator"
 import "./Team.css"
 
 function Team(prop){
     return (
-        <section
-            className="team" 
+        prop.colaborators.length > 0 ?
+        <section className="team" 
             style={{backgroundColor:prop.secondColor}}
         >
             <h3 style={{borderColor:prop.mainColor}}>{prop.nameTeam}</h3>
-
+            <div className="colaborators">
+            {prop.colaborators.map(colaborator => <Colaborator name={colaborator.name} role={colaborator.role} team={colaborator.team} image={colaborator.image}/>)}
+            </div>
         </section>
+        : ""
     )
 }
 

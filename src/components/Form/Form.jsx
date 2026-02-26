@@ -21,6 +21,10 @@ function Form(prop){
             image,
             team
         })
+        setName("")
+        setRole("")
+        setImage("")
+        setTeam("")
     }
     return (
         <section className="form">

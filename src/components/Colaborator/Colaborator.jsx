@@ -3,7 +3,8 @@ import "./Colaborator.css"
 function Colaborator(prop){
     return (
         <div className="colaborator">
-            <div className="header">
+            
+            <div className="header" style={{backgroundColor:prop.mainColor}}>
                 <img src={prop.image} alt="Imagem do colaborador"/>
             </div>
             <div className="footer">

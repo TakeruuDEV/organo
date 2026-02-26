@@ -9,7 +9,7 @@ function Team(prop){
         >
             <h3 style={{borderColor:prop.mainColor}}>{prop.nameTeam}</h3>
             <div className="colaborators">
-            {prop.colaborators.map(colaborator => <Colaborator name={colaborator.name} role={colaborator.role} team={colaborator.team} image={colaborator.image}/>)}
+            {prop.colaborators.map(colaborator => <Colaborator mainColor={prop.mainColor} key={colaborator.name} name={colaborator.name} role={colaborator.role} image={colaborator.image}/>)}
             </div>
         </section>
         : ""
